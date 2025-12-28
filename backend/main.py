@@ -17,8 +17,8 @@ origins = [
     "http://localhost:5173",                 # Local development
     "https://makebetterfull.vercel.app",     # Your Vercel Frontend
     "https://makebetterfull.vercel.app/",     # Trailing slash variation (just in case)
-    "https://makebetter.tech",               # Your custom domain
-    "https://makebetter.tech/",              # Trailing slash variation (just in case)
+    "https://www.makebetter.tech",               # Your custom domain
+    "https://www.makebetter.tech/",              # Trailing slash variation (just in case)
 ]
 app.add_middleware(
     CORSMiddleware,
