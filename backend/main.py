@@ -13,10 +13,14 @@ if not SUPABASE_URL or not SUPABASE_KEY:
     print("Warning: Supabase credentials not found in environment variables.")
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
+origins = [
+    "http://localhost:5173",                 # Local development
+    "https://makebetterfull.vercel.app",     # Your Vercel Frontend
+    "https://makebetterfull.vercel.app/"     # Trailing slash variation (just in case)
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://makebetterfull.vercel.app"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
