@@ -16,7 +16,9 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 origins = [
     "http://localhost:5173",                 # Local development
     "https://makebetterfull.vercel.app",     # Your Vercel Frontend
-    "https://makebetterfull.vercel.app/"     # Trailing slash variation (just in case)
+    "https://makebetterfull.vercel.app/",     # Trailing slash variation (just in case)
+    "https://makebetter.tech",               # Your custom domain
+    "https://makebetter.tech/",              # Trailing slash variation (just in case)
 ]
 app.add_middleware(
     CORSMiddleware,
