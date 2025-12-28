@@ -11,12 +11,12 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 if not SUPABASE_URL or not SUPABASE_KEY:
     print("Warning: Supabase credentials not found in environment variables.")
-    
+
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://makebetterfull.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
